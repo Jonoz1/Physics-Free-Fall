@@ -1,0 +1,19 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Physics Free Fall", "Physics Free Fall.csproj", "{D1887DA5-7499-4ED5-AFDD-1D836AFF972B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+	Debug|Any CPU = Debug|Any CPU
+	ExportDebug|Any CPU = ExportDebug|Any CPU
+	ExportRelease|Any CPU = ExportRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D1887DA5-7499-4ED5-AFDD-1D836AFF972B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1887DA5-7499-4ED5-AFDD-1D836AFF972B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1887DA5-7499-4ED5-AFDD-1D836AFF972B}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{D1887DA5-7499-4ED5-AFDD-1D836AFF972B}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{D1887DA5-7499-4ED5-AFDD-1D836AFF972B}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{D1887DA5-7499-4ED5-AFDD-1D836AFF972B}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+	EndGlobalSection
+EndGlobal
