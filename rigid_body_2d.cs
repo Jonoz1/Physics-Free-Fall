@@ -18,6 +18,8 @@ public partial class rigid_body_2d : RigidBody2D
 		rootViewport = GetViewport();
 		rootVPHeight = (int)rootViewport.GetVisibleRect().Size.Y;
 		stringHighestY = highestY + 100;
+		
+		GetNode<Camera2D>("Camera2D").DragTopMargin = 1.5f;
 	}
 
 	public override void _PhysicsProcess(double delta)
