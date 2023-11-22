@@ -29,7 +29,17 @@ public partial class main : Node2D
 		bodyScript.scaleInPixels = scaleInPixels;
 	}
 
-	public override void _PhysicsProcess(double delta)
+    public override void _Process(double delta)
+    {
+        if (Input.IsActionJustPressed("reset"))
+		{
+			body.LinearVelocity = new Vector2(0, 0);
+			body.GlobalPosition = initialHeight >= 0 ? new Vector2(640, 620.3f) : new Vector2(640, initialHeight);
+			bodyScript.ResetHighestY();
+		}
+    }
+
+    public override void _PhysicsProcess(double delta)
 	{
 		speedLabel.Text = $"Speed: {(body.LinearVelocity.Y == -0 ? 0 : -body.LinearVelocity.Y / scaleInPixels):F1}m/s";
 		
@@ -37,7 +47,7 @@ public partial class main : Node2D
 		
 		initialHeight = iHeightField.Text == "" ? 0 : -(iHeightField.Text.ToFloat() * scaleInPixels) + 620.3f;
 		
-		GD.Print(body.GlobalPosition);
+		// GD.Print(body.GlobalPosition);
 		
 		HandleIsMoving();
 		
@@ -52,11 +62,6 @@ public partial class main : Node2D
 		if (Input.IsActionJustPressed("jump") && body.GlobalPosition == new Vector2(640, 620.3f))
 		{
 			body.LinearVelocity = new Vector2(0, -intialVelocity);
-			body.GlobalPosition = initialHeight >= 0 ? new Vector2(640, 620.3f) : new Vector2(640, initialHeight);
-			bodyScript.ResetHighestY();
-		} else if (Input.IsActionJustPressed("reset"))
-		{
-			body.LinearVelocity = new Vector2(0, 0);
 			body.GlobalPosition = initialHeight >= 0 ? new Vector2(640, 620.3f) : new Vector2(640, initialHeight);
 			bodyScript.ResetHighestY();
 		}
