@@ -12,7 +12,7 @@ public partial class main : Node2D
 	float intialVelocity;
 	LineEdit iHeightField;
 	float initialHeight;
-	bool isMoving = false;
+	bool isMoving;
 
 	public override void _Ready()
 	{
